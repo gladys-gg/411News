@@ -1,7 +1,17 @@
 {% extends 'base.html' %}
+{% import 'macros.html' as macro%}
+
+
 {% block head %}
 {{ super() }}
 {% endblock %}
 {% block content %}
-    <h1 class="bg-primary">Hello world</h1>
+<div class="container">
+    <div class="row">
+        <div class = "col-md-12">
+            <h3 class="text-center">News Sources</h3>
+            <h4>{{ macro.displaySourcesList(sources)}}</h4>
+        </div>
+    </div>          
+</div>
 {% endblock %}
