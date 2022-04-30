@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro%}
+
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class = "col-md-12">
+            <h3 class="text-center">TRENDING TOPICS</h3>
+            <h4>{{ macro.displayArticlesList(articles)}}</h4>
+        </div>
+    </div>
+</div>

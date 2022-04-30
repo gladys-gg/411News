@@ -13,7 +13,7 @@ def configure_request(app):
 
   global api_key,base_url
   api_key = app.config['NEWS_API_KEY']
-  base_url = app.config['NEWS_API_BASE_URL']
+  sources_base_url = app.config['NEWS_API_BASE_URL']
   article_base_url = app.config['ARTICLES_API_BASE_URL']
 
 
@@ -68,7 +68,7 @@ def get_articles(source_id):
     '''
     Function that gets the json response to our url request
     '''
-    get_articles_url = 'https://newsapi.org/v2/everything?{}&apiKey=0b09126777674730a031e9037e30d50e'
+    get_articles_url = 'https://newsapi.org/v2/everything?{}&apiKey=0b09126777674730a031e9037e30d50e'.format(sources_id,api_key)
 
     with urllib.request.urlopen(get_articles_url) as url:
       get_articles_data = url.read()
