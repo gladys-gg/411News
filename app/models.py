@@ -24,3 +24,4 @@ class Articles:
         self.author = author
         self.publishedAt = publishedAt
         self.url = url
+ 

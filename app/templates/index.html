@@ -9,8 +9,19 @@
 <div class="container">
     <div class="row">
         <div class = "col-md-12">
-            <h3 class="text-center">News Sources</h3>
+            <h3 class="text-center">TODAY'S TOP HEADLINES</h3>
             <h4>{{ macro.displaySourcesList(sources)}}</h4>
+            <!-- <div class = "head"></div>
+            {% for title,urlToImage,content,author,url,publishedAt in contents %}
+            <div class="wrapper">
+                <div class="item"><a href="{{url}}"><img src="{{articles.urlToImage}}"></a></div>
+                <div class = "c-box">
+                <div class="content"><a href="{{url}}"><h2>{{articles.title}}</h2></a></div>
+                <div class="content"><a href="{{url}}"><p>{{articles.description}}</p></a></div>
+                <div class="content"><p style="color:rgb(77, 255, 0);">Publish Date:- </p><p>{{publishedAt}}</p></div>
+                </div>
+                </div> 
+            {% endfor %}  -->
         </div>
     </div>          
 </div>
