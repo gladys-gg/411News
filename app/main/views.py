@@ -16,14 +16,14 @@ def index():
     return render_template('index.html', sources = sources)
 
 # Views
-@main.route('/articles/<sources_id>')
-def articles():
+@main.route('/articles/')
+def article():
     '''
     View root page function that returns the index page and its data
     '''
 
         # Getting popular articles
-    articles = get_articles(sources_id)
+    articles = get_articles()
 
     return render_template('articles.html', articles = articles)
     

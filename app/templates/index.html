@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% import 'macros.html' as macro%}
+<!-- {% import 'macros.html' as macro%} -->
 
 
 {% block head %}
@@ -10,18 +10,19 @@
     <div class="row">
         <div class = "col-md-12">
             <h3 class="text-center">TODAY'S TOP HEADLINES</h3>
-            <h4>{{ macro.displaySourcesList(sources)}}</h4>
-            <!-- <div class = "head"></div>
-            {% for title,urlToImage,content,author,url,publishedAt in contents %}
-            <div class="wrapper">
-                <div class="item"><a href="{{url}}"><img src="{{articles.urlToImage}}"></a></div>
-                <div class = "c-box">
-                <div class="content"><a href="{{url}}"><h2>{{articles.title}}</h2></a></div>
-                <div class="content"><a href="{{url}}"><p>{{articles.description}}</p></a></div>
-                <div class="content"><p style="color:rgb(77, 255, 0);">Publish Date:- </p><p>{{publishedAt}}</p></div>
-                </div>
-                </div> 
-            {% endfor %}  -->
+            {%for sources in sources_list %}
+            <div class ="col-xs-12 col-sm-4 col-md-4 col-lg-4 ">
+
+                <div class="card mt-3 pd-3">
+                <h3 class="text-center">{{sources.name}}</h3>
+                <p class="text-uppercase text-center">{{sources.description}}</p>
+                <p >{{sources.category}}</p>
+                <a href="/articles/{{sources.id}}"><button class ="btn btn-success">{{ sources.id}}</button></a>
+            </div>
+            
+            </div>
+            {% endfor %} 
+        
         </div>
     </div>          
 </div>
