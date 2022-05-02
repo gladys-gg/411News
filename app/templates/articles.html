@@ -1,15 +1,14 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+
 {% import 'macros.html' as macro%}
 
 {% block content %}
-<div class="container">
-   <h2 align='center'>All Articles</h2>
-   <div class="row">
-      {{ macro.displayArticlesList(articles) }}
-   </div>
-</div>
- {% endblock %}
 
-    </div>
+    <h2 class='text-center'>Top articles today</h2>
+    
+        {{ macro.displayArticlesList(articles_list) }}
+
+        
+    
 
 {% endblock %}

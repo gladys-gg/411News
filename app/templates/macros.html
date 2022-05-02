@@ -15,23 +15,53 @@
             </div>
 
 
-        <a href="{{sources.id}}"><button class ="btn btn-success bg-dark">{{ sources.id}}</button></a>
+        <a href="/articles/{{sources.id}}"><button class ="btn btn-success bg-dark mb-2">Read More..</button></a>
     </div>
     </div>
-
-    <!-- <div class ="card mt-3 col-6">
-
-    
-        <h3 class="text-center">{{sources.name}}</h3>
-        <p>{{sources.description}}</p>
-        <p class="text-uppercase text-center">Category: {{sources.category}}</p>
-        <a href="/articles/{{sources.id}}"><button class ="btn btn-success">{{ sources.id}}</button></a>
-   
-    
-    </div> -->
     
     {% endfor %}
 
+{% endmacro %}
+
+<!-- {% macro dispalyArticlesList(articles) %}
+<div class="container-fluid">
+    <div class="row">
+        {% for articles in articles_list %}
+        <div class="col-md-6">
+            <div class="panel panel-default text center">
+                <div class="panel-heading">
+                    <h3>{{articles.title}}</h3>
+                </div>
+                <div class="panel-body">
+                    <img src="{{articles.urlToImage}}" alt="" width="70%" height="70%">
+                    <p>{{articles.content}}</p>
+
+                    <a href="{{articlesl.ur}}"><button class ="btn btn-success bg-dark mb-2">Read More..</button></a>
+                    <p> Published on: {{articles.publishedAt}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor%}
+    </div>
+</div>
+
+{% endmacro%} -->
+
+{% macro displayArticlesList(articles) %}
+    {% for articles in articles_list %}
+    <div class="col-lg-6">
+        <div class="card">
+            {% if articles.urlToImage %}
+            <img src="{{ articles.content }}" height="300" width="525" alt="">
+            {% endif %}
+            <div class="card-body">
+                <p><b>{{ articles.title }}</b></p>
+                <p>Uploaded on:{{ articles.publishedAt}} </p>
+                <a class ="btn btn-dark" href="{{ articles.url }}">Read More</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
 {% endmacro %}
 
 
