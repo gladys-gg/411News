@@ -23,7 +23,8 @@ class Articles:
         self.title = title
         self.urlToImage = urlToImage
         self.content = content
+        self.url = url
         self.author = author
         self.publishedAt = publishedAt
-        self.url = url
+        
  

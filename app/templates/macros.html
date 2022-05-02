@@ -23,7 +23,7 @@
 
 {% endmacro %}
 
-<!-- {% macro dispalyArticlesList(articles) %}
+{% macro dispalyArticlesList(articles_list) %}
 <div class="container-fluid">
     <div class="row">
         {% for articles in articles_list %}
@@ -35,9 +35,10 @@
                 <div class="panel-body">
                     <img src="{{articles.urlToImage}}" alt="" width="70%" height="70%">
                     <p>{{articles.content}}</p>
-
-                    <a href="{{articlesl.ur}}"><button class ="btn btn-success bg-dark mb-2">Read More..</button></a>
-                    <p> Published on: {{articles.publishedAt}}</p>
+                    <p>{{articles.publishedAt}}</p>
+                    <a href="{{articles.url}}">Read More</a>
+                    
+                    
                 </div>
             </div>
         </div>
@@ -45,9 +46,9 @@
     </div>
 </div>
 
-{% endmacro%} -->
+{% endmacro%}
 
-{% macro displayArticlesList(articles) %}
+<!-- {% macro displayArticlesList(articles) %}
     {% for articles in articles_list %}
     <div class="col-lg-6">
         <div class="card">
@@ -62,7 +63,7 @@
         </div>
     </div>
     {% endfor %}
-{% endmacro %}
+{% endmacro %} -->
 
 
 
