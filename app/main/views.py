@@ -1,5 +1,5 @@
 from flask import render_template
-from ..request import get_sources, get_articles
+from ..request import get_sources
 from . import main
 
 
@@ -16,14 +16,14 @@ def index():
     return render_template('index.html', sources = sources)
 
 # Views
-@main.route('/articles/')
-def article():
-    '''
-    View root page function that returns the index page and its data
-    '''
+# @main.route('/articles/<sources_id>')
+# def articles(source_id):
+#     '''
+#     View root page function that returns the index page and its data
+#     '''
 
-        # Getting popular articles
-    articles = get_articles()
+#         # Getting popular articles
+#     articles = get_articles()
 
-    return render_template('articles.html', articles = articles)
+#     return render_template('articles.html', articles = articles)
     
