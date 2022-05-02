@@ -27,3 +27,18 @@ git clone https://github.com/gladys-gg/411News.git
 * python3.6 manage.py test
 * Open the application on your browser 127.0.0.1:5000.
 
+### Known Bugs
+No known bugs.
+
+#### Technologies Used
+* Python3.8
+* Flask
+* Heroku  
+
+
+### Support and contact details
+Incase of any contributions fork the repo and make any substantial changes. Incase of any ideas,suggestions or complaints feel free to connect with me on gladysmwangi04@yahoo.com
+
+License
+MIT Copyright (c) 2022 411News.
+
