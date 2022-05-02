@@ -4,24 +4,19 @@
 
 {% block head %}
 {{ super() }}
+
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
 {% endblock %}
+
 {% block content %}
 <div class="container">
     <div class="row">
         <div class = "col-md-12">
             <h3 class="text-center">TODAY'S TOP HEADLINES</h3>
-            {%for sources in sources_list %}
-            <div class ="col-xs-12 col-sm-4 col-md-4 col-lg-4 ">
-
-                <div class="card mt-3 pd-3">
-                <h3 class="text-center">{{sources.name}}</h3>
-                <p class="text-uppercase text-center">{{sources.description}}</p>
-                <p >{{sources.category}}</p>
-                <a href="/articles/{{sources.id}}"><button class ="btn btn-success">{{ sources.id}}</button></a>
-            </div>
-            
-            </div>
-            {% endfor %} 
+            <div class="wrapper">
+                <img src="https://t4.ftcdn.net/jpg/03/37/92/49/360_F_337924964_fF6I0iZkv9lvoIEn71f0OsgawArIPPDu.jpg">
+                
+            </div> 
         
         </div>
     </div>          
