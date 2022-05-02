@@ -19,7 +19,7 @@ class Articles:
     Source class to define News Objects
     '''
 
-    def __init__(self,title,urlToImage,content,author,publishedAt,url):
+    def __init__(self,title,urlToImage,content,url,author,publishedAt):
         self.title = title
         self.urlToImage = urlToImage
         self.content = content
